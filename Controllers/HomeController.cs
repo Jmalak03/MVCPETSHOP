@@ -58,7 +58,27 @@ namespace MVCPETSHOP.Controllers
                 // AQUÍ EL CÓDIGO DE VALIDACIÓN DEL USUARIO
                 return View("Pedido");
          }
-          
+
+        public ActionResult Mascota()
+        {
+
+
+            // AQUÍ EL CÓDIGO DE VALIDACIÓN DEL USUARIO
+            return View("Mascota");
+        }
+
+        public ActionResult Crear()
+        {
+
+
+            // AQUÍ EL CÓDIGO DE VALIDACIÓN DEL USUARIO
+            return View("Crear");
+        }
+
+
+
+      
+
     }
 
 

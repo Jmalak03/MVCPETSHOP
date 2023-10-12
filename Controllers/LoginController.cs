@@ -2,13 +2,12 @@
 
 namespace MVCPETSHOP.Controllers
 {
-    public class PedidoController : Controller
+    public class LoginController : Controller
     {
+        
         public IActionResult Index()
         {
             return View();
         }
-
-
     }
 }

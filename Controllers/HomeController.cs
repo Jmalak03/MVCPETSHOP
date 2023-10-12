@@ -47,6 +47,20 @@ namespace MVCPETSHOP.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
+
+        
+        public ActionResult Pedido()
+        {
+            
+            
+                // AQUÍ EL CÓDIGO DE VALIDACIÓN DEL USUARIO
+                return View("Pedido");
+         }
+          
     }
 
+
 }
+

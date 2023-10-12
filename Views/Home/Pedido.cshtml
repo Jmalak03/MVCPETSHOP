@@ -1,0 +1,64 @@
+﻿@model PedidoModel
+
+<div class="row">
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        <div class="col-md-3 form-vertical" >
+            <br />
+            @Html.LabelFor(x => x.Fecha, new { @class = "" })
+            @Html.TextBoxFor(x => x.Fecha, new { @class = "form-control", autofocus = "autofocus" })
+            @Html.ValidationMessageFor(x => x.Fecha, null, new { @class = "text-danger" })
+            <br />
+
+            @Html.LabelFor(x => x.Nombre, new { @class = "" })
+            @Html.TextBoxFor(x => x.Nombre, new { @class = "form-control", autofocus = "autofocus" })
+            @Html.ValidationMessageFor(x => x.Nombre, null, new { @class = "text-danger" })
+            <br />
+
+            @Html.LabelFor(x => x.Productos, new { @class = "" })
+            @Html.TextBoxFor(x => x.Productos, new { @class = "form-control", autofocus = "autofocus" })
+            @Html.ValidationMessageFor(x => x.Productos, null, new { @class = "text-danger" })
+            <br />
+
+
+
+            @Html.ValidationMessageFor(x => x.Nombre
+              , null, new { @class = "text-danger" })
+            <br />
+
+            <button class="btn btn-primary" type="submit" value="Inciar" onclick="Iniciar">
+                Hacer Pedido
+            </button>
+
+            <div class="checkbox-inline pull-right">
+                @Html.CheckBoxFor(x => x.RememberMe, new { @class = "" })
+                @Html.LabelFor(x => x.RememberMe, new { @class = "" })
+            </div>
+            <br />
+        </div>
+
+
+
+    }
+</div>
+
+
+<div class="alert-success">
+    <span class="closebtn">&times;</span>
+    <strong> Pedido Completado!</strong> Gracias por tu compra 
+</div>
+
+<script>
+    var close = document.getElementsByClassName("closebtn");
+    var i;
+
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function () {
+            var div = this.parentElement;
+            div.style.opacity = "0";
+            setTimeout(function () { div.style.display = "none"; }, 600);
+        }
+    }
+</script>
+
+

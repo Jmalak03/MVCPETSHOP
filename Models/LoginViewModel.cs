@@ -11,7 +11,7 @@ namespace MVCPETSHOP.Models
             ErrorMessage = "Dirección de Correo electrónico incorrecta.")]
         [StringLength(100, ErrorMessage = "Longitud máxima 100")]
         [DataType(DataType.EmailAddress)]
-        public string Email { get; set; }
+        public string ?Email { get; set; }
 
         [Display(Name = "Contraseña")]
         [Required(ErrorMessage = "Este campo es requerido.")]

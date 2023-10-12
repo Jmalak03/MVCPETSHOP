@@ -3,7 +3,7 @@
 <div class="row">
     @using (Html.BeginForm("Index", "Home", FormMethod.Post))
     {
-        <div class="col-md-3 form-horizontal">
+        <div class="col-md-3 form-horizontal" style="background-color: beige ; border-color: white ; border-radius: 30px ; align-content: center ; padding: 40px">
             <br />
             @Html.LabelFor(x => x.Email, new { @class = "" })
             @Html.TextBoxFor(x => x.Email, new { @class = "form-control", autofocus = "autofocus" })
